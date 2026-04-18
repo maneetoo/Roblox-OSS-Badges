@@ -1,0 +1,11 @@
+{
+  "name": "roblox-oss-badges-sync",
+  "version": "1.0.1",
+  "description": "Auto-sync SVG badges to GitHub Gist",
+  "scripts": {
+    "sync": "node sync-to-gist.js"
+  },
+  "dependencies": {
+    "@octokit/rest": "^20.0.2"
+  }
+}
