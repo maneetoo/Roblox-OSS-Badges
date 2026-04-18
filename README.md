@@ -7,7 +7,7 @@ Roblox-style badges for the Roblox Open Source Community. Beautiful, consistent 
 
 
 ## Installation
-[GitHub](https://github.com/maneetoo/Roblox-OSS-Badges/releases), [Figma](https://www.figma.com/design/vGXrazmoawtGBcMQD8aFI4/Roblox-OSS-Badges?node-id=0-1&t=Oh8gA84ToZcPrztt-1)
+[GitHub](https://github.com/maneetoo/Roblox-OSS-Badges/releases), [Figma](https://www.figma.com/design/vGXrazmoawtGBcMQD8aFI4/Roblox-OSS-Badges?node-id=0-1&t=Oh8gA84ToZcPrztt-1), [Gist](https://gist.github.com/maneetoo/41b5af208d3557260c790a53ef46ca43)
 
 ## Example Usage
 <div align="center">
@@ -18,6 +18,7 @@ Roblox-style badges for the Roblox Open Source Community. Beautiful, consistent 
 <div align="center">
   <img src="./Assets/Roblox-OSS-Badges-Overall.png" alt="Roblox-OSS-Badges Overall">
 </div>
+
 
 The Idea was taken & approved by [RyanLua](https://github.com/ryanlua)
 
