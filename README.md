@@ -61,6 +61,11 @@ There are several ways to install Roblox OSS Badges, here are a few of them:
   <img src="./Assets/Roblox-OSS-Badges-Overall.png" alt="Roblox-OSS-Badges Overall">
 </div>
 
+## SOON
+
+- Auto-Generated Badges in Roblox Style (like github badges)
+- New Badges Variants (Blue, Pink, Retro & more)
+- New Unique Badges in Socials & Roblox-Styled groups
 
 ## Mentions
 The Idea was taken & approved by [RyanLua](https://github.com/ryanlua)
