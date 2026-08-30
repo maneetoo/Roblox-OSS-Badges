@@ -1,6 +1,6 @@
 {
   "name": "roblox-oss-badges-sync",
-  "version": "1.0.1",
+  "version": "2.0.0",
   "description": "Auto-sync SVG badges to GitHub Gist",
   "scripts": {
     "sync": "node sync-to-gist.js"
