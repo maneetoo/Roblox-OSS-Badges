@@ -1,0 +1,70 @@
+name: Strip SVG filter group
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - '**.svg'
+
+permissions:
+  contents: write
+
+jobs:
+  strip:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Remove <g filter="url(#a)"> wrappers
+        shell: python
+        run: |
+          import re
+          from pathlib import Path
+
+          open_re = re.compile(r'<g\s+filter="url\(#a\)"\s*>')
+          tag_re = re.compile(r'<g\b[^>]*?(/?)>|</g\s*>')
+
+          def strip(text):
+              while True:
+                  m = open_re.search(text)
+                  if not m:
+                      return text
+                  depth = 1
+                  close = None
+                  for t in tag_re.finditer(text, m.end()):
+                      if t.group(0).startswith('</'):
+                          depth -= 1
+                      elif t.group(1) != '/':
+                          depth += 1
+                      if depth == 0:
+                          close = t
+                          break
+                  if close is None:
+                      return text  # нет парного </g> — не трогаем
+                  text = (text[:m.start()]
+                          + text[m.end():close.start()]
+                          + text[close.end():])
+
+          changed = 0
+          for p in Path('.').rglob('*.svg'):
+              if any(part in ('.git', 'node_modules') for part in p.parts):
+                  continue
+              src = p.read_text(encoding='utf-8')
+              out = strip(src)
+              if out != src:
+                  p.write_text(out, encoding='utf-8')
+                  print(f'Fixed: {p}')
+                  changed += 1
+          print(f'Files changed: {changed}')
+
+      - name: Commit changes
+        run: |
+          if [ -n "$(git status --porcelain)" ]; then
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add -A
+            git commit -m "chore: strip <g filter=url(#a)> wrappers from SVGs"
+            git push
+          else
+            echo "Nothing to commit"
+          fi
