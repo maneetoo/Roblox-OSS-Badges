@@ -12,11 +12,11 @@
 
 <div align="center">
 
-[![GitHub Releases](https://raw.githubusercontent.com/maneetoo/Roblox-OSS-Badges/main/Badges/Community/GitHub/link-github-releases.svg)](https://github.com/maneetoo/Roblox-OSS-Badges/releases)
-[![Roblox OSS Discord Server](https://raw.githubusercontent.com/maneetoo/Roblox-OSS-Badges/ad94e1807674586b076f5468a975f2201ae3b28b/Badges/Community/Discord/link-discord-roblox-oss.svg)](https://discord.gg/vtUJdtUK2J)
-[![Discord Forum](https://raw.githubusercontent.com/maneetoo/Roblox-OSS-Badges/ad94e1807674586b076f5468a975f2201ae3b28b/Badges/Community/Discord/link-discord-forum.svg)](https://discord.com/channels/385151591524597761/1494985067087269939)
-[![Changelog](https://raw.githubusercontent.com/maneetoo/Roblox-OSS-Badges/ad94e1807674586b076f5468a975f2201ae3b28b/Badges/Roblox-Styled/Original/link-changelog.svg)](https://github.com/maneetoo/Roblox-OSS-Badges/blob/main/CHANGELOG.md)
-[![My Works](https://raw.githubusercontent.com/maneetoo/Roblox-OSS-Badges/ad94e1807674586b076f5468a975f2201ae3b28b/Badges/Roblox-Styled/Original/link-my-works.svg)](https://github.com/maneetoo/)
+[![GitHub Releases](./Badges/Community/GitHub/link-github-releases.svg)](https://github.com/maneetoo/Roblox-OSS-Badges/releases)
+[![Roblox OSS Discord Server](./Badges/Community/Discord/link-discord-roblox-oss.svg)](https://discord.gg/vtUJdtUK2J)
+[![Discord Forum](./Badges/Community/Discord/link-discord-forum.svg)](https://discord.com/channels/385151591524597761/1494985067087269939)
+[![Changelog](./Badges/Roblox-Styled/Original/link-changelog.svg)](https://github.com/maneetoo/Roblox-OSS-Badges/blob/main/CHANGELOG.md)
+[![My Works](./Badges/Roblox-Styled/Original/link-my-works.svg)](https://github.com/maneetoo/)
 
 </div>
 
@@ -61,11 +61,12 @@ There are several ways to install Roblox OSS Badges, here are a few of them:
   <img src="./Assets/Roblox-OSS-Badges-Overall.png" alt="Roblox-OSS-Badges Overall">
 </div>
 
-## SOON
+## Checkmarks
 
-- Auto-Generated Badges in Roblox Style (like github badges)
-- New Badges Variants (Blue, Pink, Retro & more)
-- New Unique Badges in Socials & Roblox-Styled groups
+- [x] Fix pixilated badges on small screens (Removed Url SVG Group Filter)
+- [ ] Auto-Generated Badges in Roblox Style (like github badges)
+- [ ] New Badges Variants (Blue, Pink, Retro & more)
+- [ ] New Unique Badges in Socials & Roblox-Styled groups
 
 ## Mentions
 The Idea was taken & approved by [RyanLua](https://github.com/ryanlua)
