@@ -40,7 +40,7 @@ jobs:
                           close = t
                           break
                   if close is None:
-                      return text  # нет парного </g> — не трогаем
+                      return text
                   text = (text[:m.start()]
                           + text[m.end():close.start()]
                           + text[close.end():])
