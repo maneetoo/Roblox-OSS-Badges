@@ -1,0 +1,46 @@
+name: Release
+
+on:
+  workflow_dispatch:
+    inputs:
+      version:
+        description: 'Version tag'
+        required: true
+        type: string
+
+permissions:
+  contents: write
+
+jobs:
+  package:
+    uses: ./.github/workflows/package-assets.yml
+
+  release:
+    needs: package
+    runs-on: ubuntu-latest
+    steps:
+      - name: Download packaged assets
+        uses: actions/download-artifact@v4
+        with:
+          name: release-assets
+          path: dist
+
+      - name: Determine pre-release flag
+        id: check
+        run: |
+          if [[ "${{ inputs.version }}" == *-nightly ]]; then
+            echo "prerelease=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "prerelease=false" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Create GitHub Release
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: ${{ inputs.version }}
+          name: ${{ inputs.version }}
+          prerelease: ${{ steps.check.outputs.prerelease }}
+          files: |
+            dist/release-assets.zip
+            dist/release-assets.tar
+            dist/release-assets.7z
