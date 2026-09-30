@@ -61,7 +61,7 @@ There are several ways to install Roblox OSS Badges, here are a few of them:
   <img src="./Assets/Roblox-OSS-Badges-Overall.png" alt="Roblox-OSS-Badges Overall">
 </div>
 
-## Checkmarks
+## Checkmarks before v2.1.0
 
 - [x] Update dependencies in `package.json` and `github actions workflows` via dependabot
 - [x] Fix pixilated badges on small screens (Removed Url SVG Group Filter)
