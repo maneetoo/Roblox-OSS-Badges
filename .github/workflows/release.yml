@@ -13,7 +13,7 @@ permissions:
 
 jobs:
   package:
-    uses: ./.github/workflows/package-assets.yml
+    uses: ./.github/workflows/package_files.yml
 
   release:
     needs: package
