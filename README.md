@@ -63,6 +63,7 @@ There are several ways to install Roblox OSS Badges, here are a few of them:
 
 ## Checkmarks
 
+- [x] Update dependencies in `package.json` and `github actions workflows` via dependabot
 - [x] Fix pixilated badges on small screens (Removed Url SVG Group Filter)
 - [ ] Auto-Generated Badges in Roblox Style (like github badges)
 - [ ] New Badges Variants (Blue, Pink, Retro & more)
